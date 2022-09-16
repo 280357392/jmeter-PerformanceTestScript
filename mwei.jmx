@@ -1,0 +1,2446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="测试计划" enabled="true">
+      <stringProp name="TestPlan.comments">jmeter -n -t mwei.jmx -l result.jtl</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+        <boolProp name="ResultCollector.error_logging">true</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>true</responseData>
+            <samplerData>true</samplerData>
+            <xml>true</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>true</responseHeaders>
+            <requestHeaders>true</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <fileName>true</fileName>
+            <hostname>true</hostname>
+            <threadCounts>true</threadCounts>
+            <sampleCount>true</sampleCount>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="聚合报告" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>true</responseData>
+            <samplerData>true</samplerData>
+            <xml>true</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>true</responseHeaders>
+            <requestHeaders>true</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <fileName>true</fileName>
+            <hostname>true</hostname>
+            <threadCounts>true</threadCounts>
+            <sampleCount>true</sampleCount>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="用户参数" enabled="true">
+        <collectionProp name="UserParameters.names">
+          <stringProp name="1088896112">Access-token</stringProp>
+          <stringProp name="25161714">device-id</stringProp>
+        </collectionProp>
+        <collectionProp name="UserParameters.thread_values">
+          <collectionProp name="-1568804215">
+            <stringProp name="0"></stringProp>
+            <stringProp name="1067935507">CA45F33D56570A34145EE2E60C323C64587AD84C</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <boolProp name="UserParameters.per_iteration">false</boolProp>
+        <stringProp name="TestPlan.comments">协议、IP、端口</stringProp>
+      </UserParameters>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP请求默认值" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain">ferrari-pre-backend.com</stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol">https</stringProp>
+        <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="TestPlan.comments">压测：192.168.10.110:8888
+测试：ferrari.besmile.me:80</stringProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout">300000</stringProp>
+        <stringProp name="HTTPSampler.response_timeout">300000</stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="01首页all20%" enabled="true">
+        <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="TargetLevel">${__tstFeedback(ThroughputShapingTimer3,70,210,70)}</stringProp>
+        <stringProp name="RampUp">0</stringProp>
+        <stringProp name="Steps">0</stringProp>
+        <stringProp name="Hold">590</stringProp>
+        <stringProp name="LogFilename"></stringProp>
+        <stringProp name="Iterations"></stringProp>
+        <stringProp name="Unit">S</stringProp>
+      </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
+      <hashTree>
+        <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="ThroughputShapingTimer3" enabled="true">
+          <collectionProp name="load_profile">
+            <collectionProp name="1350059746">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="1662090">66.8</stringProp>
+              <stringProp name="1567">10</stringProp>
+            </collectionProp>
+            <collectionProp name="1937943">
+              <stringProp name="1662090">66.8</stringProp>
+              <stringProp name="1687076">71.8</stringProp>
+              <stringProp name="52748">590</stringProp>
+            </collectionProp>
+          </collectionProp>
+        </kg.apc.jmeter.timers.VariableThroughputTimer>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="读取userToken.csv文件" enabled="true">
+          <stringProp name="filename">userToken.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames">userToken</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.group</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="01首页All20%" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="count" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">count</stringProp>
+                <stringProp name="Argument.value">10</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="timeline" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">timeline</stringProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/flower-api/post/all</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">zh-CN</stringProp>
+              </elementProp>
+              <elementProp name="channel" elementType="Header">
+                <stringProp name="Header.name">channel</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="Access-token" elementType="Header">
+                <stringProp name="Header.name">Access-token</stringProp>
+                <stringProp name="Header.value">${userToken}</stringProp>
+              </elementProp>
+              <elementProp name="device-id" elementType="Header">
+                <stringProp name="Header.name">device-id</stringProp>
+                <stringProp name="Header.value">${device-id}</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="app-version" elementType="Header">
+                <stringProp name="Header.name">app-version</stringProp>
+                <stringProp name="Header.value">2</stringProp>
+              </elementProp>
+              <elementProp name="environment" elementType="Header">
+                <stringProp name="Header.name">environment</stringProp>
+                <stringProp name="Header.value">4G</stringProp>
+              </elementProp>
+              <elementProp name="driver" elementType="Header">
+                <stringProp name="Header.name">driver</stringProp>
+                <stringProp name="Header.value">android</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json; charset=utf-8</stringProp>
+              </elementProp>
+              <elementProp name="model" elementType="Header">
+                <stringProp name="Header.name">model</stringProp>
+                <stringProp name="Header.value">SM-A7050</stringProp>
+              </elementProp>
+              <elementProp name="osVersion" elementType="Header">
+                <stringProp name="Header.name">osVersion</stringProp>
+                <stringProp name="Header.value">11</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">okhttp/5.0.0-alpha.3</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">x-forwarded-for</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="解密新版v1" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import AES_ECB_Cipher;
+
+
+def code = prev.getResponseCode();
+if(&quot;200&quot; == code){
+	//请求成功
+	//app解密
+	String key = &quot;bbyy-2021-No-Bug&quot;;
+	//H5解密
+	//String key = &quot;jYSjYyxKF9ns6k9C58IcJYa4AFr1HSTn&quot;;
+	
+	//String result = &quot;${responseBody}&quot;;
+	String result = prev.getResponseDataAsString().replace(&quot;\&quot;&quot;,&quot;&quot;);
+	
+	try{
+		result = AES_ECB_Cipher.setDecrypt(key, result);
+	}
+	catch(Exception ex){
+	    
+	}
+	finally{
+	    //一定会被执行
+	    prev.setResponseData(result);
+	}
+}else{
+	//请求失败
+}
+
+
+</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="断言: code应等于0" enabled="true">
+            <stringProp name="JSON_PATH">$.code</stringProp>
+            <stringProp name="EXPECTED_VALUE">0</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">true</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="02帖子详情10%" enabled="true">
+        <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="TargetLevel">${__tstFeedback(ThroughputShapingTimer4,35,105,35)}</stringProp>
+        <stringProp name="RampUp">0</stringProp>
+        <stringProp name="Steps">0</stringProp>
+        <stringProp name="Hold">590</stringProp>
+        <stringProp name="LogFilename"></stringProp>
+        <stringProp name="Iterations"></stringProp>
+        <stringProp name="Unit">S</stringProp>
+      </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
+      <hashTree>
+        <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="ThroughputShapingTimer4" enabled="true">
+          <collectionProp name="load_profile">
+            <collectionProp name="-1177868706">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="1569830">33.4</stringProp>
+              <stringProp name="1567">10</stringProp>
+            </collectionProp>
+            <collectionProp name="-691135432">
+              <stringProp name="1569830">33.4</stringProp>
+              <stringProp name="1574635">38.4</stringProp>
+              <stringProp name="52748">590</stringProp>
+            </collectionProp>
+          </collectionProp>
+        </kg.apc.jmeter.timers.VariableThroughputTimer>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="读取userToken.csv文件" enabled="true">
+          <stringProp name="filename">userToken.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames">userToken</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.group</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="02帖子详情10%" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/flower-api/post/detail/296798163912855552</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="TestPlan.comments">参数：帖子ID
+测试：295242498249326592
+压测：296798163912855552</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en</stringProp>
+              </elementProp>
+              <elementProp name="channel" elementType="Header">
+                <stringProp name="Header.name">channel</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="Access-token" elementType="Header">
+                <stringProp name="Header.name">Access-token</stringProp>
+                <stringProp name="Header.value">${userToken}</stringProp>
+              </elementProp>
+              <elementProp name="device-id" elementType="Header">
+                <stringProp name="Header.name">device-id</stringProp>
+                <stringProp name="Header.value">${device-id}</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="app-version" elementType="Header">
+                <stringProp name="Header.name">app-version</stringProp>
+                <stringProp name="Header.value">7</stringProp>
+              </elementProp>
+              <elementProp name="environment" elementType="Header">
+                <stringProp name="Header.name">environment</stringProp>
+                <stringProp name="Header.value">wifi</stringProp>
+              </elementProp>
+              <elementProp name="driver" elementType="Header">
+                <stringProp name="Header.name">driver</stringProp>
+                <stringProp name="Header.value">android</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json; charset=utf-8</stringProp>
+              </elementProp>
+              <elementProp name="model" elementType="Header">
+                <stringProp name="Header.name">model</stringProp>
+                <stringProp name="Header.value">SM-A7050</stringProp>
+              </elementProp>
+              <elementProp name="osVersion" elementType="Header">
+                <stringProp name="Header.name">osVersion</stringProp>
+                <stringProp name="Header.value">11</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">okhttp/5.0.0-alpha.3</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">x-forwarded-for</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="解密新版v1" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import AES_ECB_Cipher;
+
+
+def code = prev.getResponseCode();
+if(&quot;200&quot; == code){
+	//请求成功
+	//app解密
+	String key = &quot;bbyy-2021-No-Bug&quot;;
+	//H5解密
+	//String key = &quot;jYSjYyxKF9ns6k9C58IcJYa4AFr1HSTn&quot;;
+	
+	//String result = &quot;${responseBody}&quot;;
+	String result = prev.getResponseDataAsString().replace(&quot;\&quot;&quot;,&quot;&quot;);
+	
+	try{
+		result = AES_ECB_Cipher.setDecrypt(key, result);
+	}
+	catch(Exception ex){
+	    
+	}
+	finally{
+	    //一定会被执行
+	    prev.setResponseData(result);
+	}
+}else{
+	//请求失败
+}
+
+
+</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="断言: code应等于0" enabled="true">
+            <stringProp name="JSON_PATH">$.code</stringProp>
+            <stringProp name="EXPECTED_VALUE">0</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">true</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="03帖子评论列表10%" enabled="true">
+        <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="TargetLevel">${__tstFeedback(ThroughputShapingTimer5,35,105,35)}</stringProp>
+        <stringProp name="RampUp">0</stringProp>
+        <stringProp name="Steps">0</stringProp>
+        <stringProp name="Hold">590</stringProp>
+        <stringProp name="LogFilename"></stringProp>
+        <stringProp name="Iterations"></stringProp>
+        <stringProp name="Unit">S</stringProp>
+      </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
+      <hashTree>
+        <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="ThroughputShapingTimer5" enabled="true">
+          <collectionProp name="load_profile">
+            <collectionProp name="-1177868706">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="1569830">33.4</stringProp>
+              <stringProp name="1567">10</stringProp>
+            </collectionProp>
+            <collectionProp name="-691135432">
+              <stringProp name="1569830">33.4</stringProp>
+              <stringProp name="1574635">38.4</stringProp>
+              <stringProp name="52748">590</stringProp>
+            </collectionProp>
+          </collectionProp>
+        </kg.apc.jmeter.timers.VariableThroughputTimer>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="读取userToken.csv文件" enabled="true">
+          <stringProp name="filename">userToken.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames">userToken</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.group</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="03帖子评论列表10%" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="count" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">count</stringProp>
+                <stringProp name="Argument.value">10</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="timeline" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">timeline</stringProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/flower-api/comment/selectList/296798163912855552</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="TestPlan.comments">参数：帖子ID
+测试：295242498249326592
+压测：296798163912855552</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en</stringProp>
+              </elementProp>
+              <elementProp name="channel" elementType="Header">
+                <stringProp name="Header.name">channel</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="Access-token" elementType="Header">
+                <stringProp name="Header.name">Access-token</stringProp>
+                <stringProp name="Header.value">${userToken}</stringProp>
+              </elementProp>
+              <elementProp name="device-id" elementType="Header">
+                <stringProp name="Header.name">device-id</stringProp>
+                <stringProp name="Header.value">${device-id}</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="app-version" elementType="Header">
+                <stringProp name="Header.name">app-version</stringProp>
+                <stringProp name="Header.value">7</stringProp>
+              </elementProp>
+              <elementProp name="environment" elementType="Header">
+                <stringProp name="Header.name">environment</stringProp>
+                <stringProp name="Header.value">wifi</stringProp>
+              </elementProp>
+              <elementProp name="driver" elementType="Header">
+                <stringProp name="Header.name">driver</stringProp>
+                <stringProp name="Header.value">android</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json; charset=utf-8</stringProp>
+              </elementProp>
+              <elementProp name="model" elementType="Header">
+                <stringProp name="Header.name">model</stringProp>
+                <stringProp name="Header.value">SM-A7050</stringProp>
+              </elementProp>
+              <elementProp name="osVersion" elementType="Header">
+                <stringProp name="Header.name">osVersion</stringProp>
+                <stringProp name="Header.value">11</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">okhttp/5.0.0-alpha.3</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">x-forwarded-for</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="解密新版v1" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import AES_ECB_Cipher;
+
+
+def code = prev.getResponseCode();
+if(&quot;200&quot; == code){
+	//请求成功
+	//app解密
+	String key = &quot;bbyy-2021-No-Bug&quot;;
+	//H5解密
+	//String key = &quot;jYSjYyxKF9ns6k9C58IcJYa4AFr1HSTn&quot;;
+	
+	//String result = &quot;${responseBody}&quot;;
+	String result = prev.getResponseDataAsString().replace(&quot;\&quot;&quot;,&quot;&quot;);
+	
+	try{
+		result = AES_ECB_Cipher.setDecrypt(key, result);
+	}
+	catch(Exception ex){
+	    
+	}
+	finally{
+	    //一定会被执行
+	    prev.setResponseData(result);
+	}
+}else{
+	//请求失败
+}
+
+
+</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="断言: code应等于0" enabled="true">
+            <stringProp name="JSON_PATH">$.code</stringProp>
+            <stringProp name="EXPECTED_VALUE">0</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">true</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="04他人个人资料10%" enabled="true">
+        <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="TargetLevel">${__tstFeedback(ThroughputShapingTimer6,35,105,35)}</stringProp>
+        <stringProp name="RampUp">0</stringProp>
+        <stringProp name="Steps">0</stringProp>
+        <stringProp name="Hold">590</stringProp>
+        <stringProp name="LogFilename"></stringProp>
+        <stringProp name="Iterations"></stringProp>
+        <stringProp name="Unit">S</stringProp>
+      </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
+      <hashTree>
+        <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="ThroughputShapingTimer6" enabled="true">
+          <collectionProp name="load_profile">
+            <collectionProp name="-1177868706">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="1569830">33.4</stringProp>
+              <stringProp name="1567">10</stringProp>
+            </collectionProp>
+            <collectionProp name="-691135432">
+              <stringProp name="1569830">33.4</stringProp>
+              <stringProp name="1574635">38.4</stringProp>
+              <stringProp name="52748">590</stringProp>
+            </collectionProp>
+          </collectionProp>
+        </kg.apc.jmeter.timers.VariableThroughputTimer>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="读取userToken.csv文件" enabled="true">
+          <stringProp name="filename">userToken.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames">userToken</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.group</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="04他人个人资料10%" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/customer-api/front/user/othersHome/1495733705132478466</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="TestPlan.comments">测试username1的id（后台用户列表查询）
+测试：1495733705132478466
+压测：1495733705132478466</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en</stringProp>
+              </elementProp>
+              <elementProp name="channel" elementType="Header">
+                <stringProp name="Header.name">channel</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="Access-token" elementType="Header">
+                <stringProp name="Header.name">Access-token</stringProp>
+                <stringProp name="Header.value">${userToken}</stringProp>
+              </elementProp>
+              <elementProp name="device-id" elementType="Header">
+                <stringProp name="Header.name">device-id</stringProp>
+                <stringProp name="Header.value">${device-id}</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="app-version" elementType="Header">
+                <stringProp name="Header.name">app-version</stringProp>
+                <stringProp name="Header.value">7</stringProp>
+              </elementProp>
+              <elementProp name="environment" elementType="Header">
+                <stringProp name="Header.name">environment</stringProp>
+                <stringProp name="Header.value">wifi</stringProp>
+              </elementProp>
+              <elementProp name="driver" elementType="Header">
+                <stringProp name="Header.name">driver</stringProp>
+                <stringProp name="Header.value">android</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json; charset=utf-8</stringProp>
+              </elementProp>
+              <elementProp name="model" elementType="Header">
+                <stringProp name="Header.name">model</stringProp>
+                <stringProp name="Header.value">SM-A7050</stringProp>
+              </elementProp>
+              <elementProp name="osVersion" elementType="Header">
+                <stringProp name="Header.name">osVersion</stringProp>
+                <stringProp name="Header.value">11</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">okhttp/5.0.0-alpha.3</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">x-forwarded-for</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="解密新版v1" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import AES_ECB_Cipher;
+
+
+def code = prev.getResponseCode();
+if(&quot;200&quot; == code){
+	//请求成功
+	//app解密
+	String key = &quot;bbyy-2021-No-Bug&quot;;
+	//H5解密
+	//String key = &quot;jYSjYyxKF9ns6k9C58IcJYa4AFr1HSTn&quot;;
+	
+	//String result = &quot;${responseBody}&quot;;
+	String result = prev.getResponseDataAsString().replace(&quot;\&quot;&quot;,&quot;&quot;);
+	
+	try{
+		result = AES_ECB_Cipher.setDecrypt(key, result);
+	}
+	catch(Exception ex){
+	    
+	}
+	finally{
+	    //一定会被执行
+	    prev.setResponseData(result);
+	}
+}else{
+	//请求失败
+}
+
+
+</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="断言: code应等于0" enabled="true">
+            <stringProp name="JSON_PATH">$.code</stringProp>
+            <stringProp name="EXPECTED_VALUE">0</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">true</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="05suggestion页10%" enabled="true">
+        <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="TargetLevel">${__tstFeedback(ThroughputShapingTimer7,35,105,35)}</stringProp>
+        <stringProp name="RampUp">0</stringProp>
+        <stringProp name="Steps">0</stringProp>
+        <stringProp name="Hold">590</stringProp>
+        <stringProp name="LogFilename"></stringProp>
+        <stringProp name="Iterations"></stringProp>
+        <stringProp name="Unit">S</stringProp>
+      </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
+      <hashTree>
+        <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="ThroughputShapingTimer7" enabled="true">
+          <collectionProp name="load_profile">
+            <collectionProp name="-1177868706">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="1569830">33.4</stringProp>
+              <stringProp name="1567">10</stringProp>
+            </collectionProp>
+            <collectionProp name="-691135432">
+              <stringProp name="1569830">33.4</stringProp>
+              <stringProp name="1574635">38.4</stringProp>
+              <stringProp name="52748">590</stringProp>
+            </collectionProp>
+          </collectionProp>
+          <stringProp name="TestPlan.comments">10</stringProp>
+        </kg.apc.jmeter.timers.VariableThroughputTimer>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="读取userToken.csv文件" enabled="true">
+          <stringProp name="filename">userToken.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames">userToken</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.group</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="05suggestion页10%" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="count" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">count</stringProp>
+                <stringProp name="Argument.value">28</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/customer-api/front/user/recommend</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">zh-CN</stringProp>
+              </elementProp>
+              <elementProp name="channel" elementType="Header">
+                <stringProp name="Header.name">channel</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="Access-token" elementType="Header">
+                <stringProp name="Header.name">Access-token</stringProp>
+                <stringProp name="Header.value">${userToken}</stringProp>
+              </elementProp>
+              <elementProp name="device-id" elementType="Header">
+                <stringProp name="Header.name">device-id</stringProp>
+                <stringProp name="Header.value">${device-id}</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="app-version" elementType="Header">
+                <stringProp name="Header.name">app-version</stringProp>
+                <stringProp name="Header.value">1.0.0</stringProp>
+              </elementProp>
+              <elementProp name="environment" elementType="Header">
+                <stringProp name="Header.name">environment</stringProp>
+                <stringProp name="Header.value">wifi</stringProp>
+              </elementProp>
+              <elementProp name="driver" elementType="Header">
+                <stringProp name="Header.name">driver</stringProp>
+                <stringProp name="Header.value">android</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json; charset=utf-8</stringProp>
+              </elementProp>
+              <elementProp name="model" elementType="Header">
+                <stringProp name="Header.name">model</stringProp>
+                <stringProp name="Header.value">SM-A7050</stringProp>
+              </elementProp>
+              <elementProp name="osVersion" elementType="Header">
+                <stringProp name="Header.name">osVersion</stringProp>
+                <stringProp name="Header.value">11</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">okhttp/5.0.0-alpha.3</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">x-forwarded-for</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="解密新版v1" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import AES_ECB_Cipher;
+
+
+def code = prev.getResponseCode();
+if(&quot;200&quot; == code){
+	//请求成功
+	//app解密
+	String key = &quot;bbyy-2021-No-Bug&quot;;
+	//H5解密
+	//String key = &quot;jYSjYyxKF9ns6k9C58IcJYa4AFr1HSTn&quot;;
+	
+	//String result = &quot;${responseBody}&quot;;
+	String result = prev.getResponseDataAsString().replace(&quot;\&quot;&quot;,&quot;&quot;);
+	
+	try{
+		result = AES_ECB_Cipher.setDecrypt(key, result);
+	}
+	catch(Exception ex){
+	    
+	}
+	finally{
+	    //一定会被执行
+	    prev.setResponseData(result);
+	}
+}else{
+	//请求失败
+}
+
+
+</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="断言: code应等于0" enabled="true">
+            <stringProp name="JSON_PATH">$.code</stringProp>
+            <stringProp name="EXPECTED_VALUE">0</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">true</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="06登录5%" enabled="true">
+        <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="TargetLevel">${__tstFeedback(ThroughputShapingTimer1,17,51,17)}</stringProp>
+        <stringProp name="RampUp">0</stringProp>
+        <stringProp name="Steps">0</stringProp>
+        <stringProp name="Hold">590</stringProp>
+        <stringProp name="LogFilename"></stringProp>
+        <stringProp name="Iterations"></stringProp>
+        <stringProp name="Unit">S</stringProp>
+        <stringProp name="TestPlan.comments">线程池大小 = RPS * &lt;最大响应时间&gt;/1000
+线程数 = 线程大小 * 期望最大时间</stringProp>
+      </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
+      <hashTree>
+        <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="ThroughputShapingTimer1" enabled="true">
+          <collectionProp name="load_profile">
+            <collectionProp name="1901182432">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="1513134">16.7</stringProp>
+              <stringProp name="1567">10</stringProp>
+            </collectionProp>
+            <collectionProp name="458018798">
+              <stringProp name="1513134">16.7</stringProp>
+              <stringProp name="1538120">21.7</stringProp>
+              <stringProp name="52748">590</stringProp>
+            </collectionProp>
+          </collectionProp>
+          <stringProp name="TestPlan.comments">16.7/s</stringProp>
+        </kg.apc.jmeter.timers.VariableThroughputTimer>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="读取loginRequestBody.csv文件" enabled="true">
+          <stringProp name="filename">loginRequestBody.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames">loginRequestBody</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.group</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="06登录5%" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${loginRequestBody}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/customer-api/front/user/login</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="TestPlan.comments">username：automatedTesting979040
+password：a111111</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en</stringProp>
+              </elementProp>
+              <elementProp name="channel" elementType="Header">
+                <stringProp name="Header.name">channel</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="Access-token" elementType="Header">
+                <stringProp name="Header.name">Access-token</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="device-id" elementType="Header">
+                <stringProp name="Header.name">device-id</stringProp>
+                <stringProp name="Header.value">${device-id}</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="app-version" elementType="Header">
+                <stringProp name="Header.name">app-version</stringProp>
+                <stringProp name="Header.value">2</stringProp>
+              </elementProp>
+              <elementProp name="environment" elementType="Header">
+                <stringProp name="Header.name">environment</stringProp>
+                <stringProp name="Header.value">4G</stringProp>
+              </elementProp>
+              <elementProp name="driver" elementType="Header">
+                <stringProp name="Header.name">driver</stringProp>
+                <stringProp name="Header.value">android</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json; charset=utf-8</stringProp>
+              </elementProp>
+              <elementProp name="model" elementType="Header">
+                <stringProp name="Header.name">model</stringProp>
+                <stringProp name="Header.value">SM-A7050</stringProp>
+              </elementProp>
+              <elementProp name="osVersion" elementType="Header">
+                <stringProp name="Header.name">osVersion</stringProp>
+                <stringProp name="Header.value">11</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">okhttp/5.0.0-alpha.3</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">x-forwarded-for</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="解密新版v1" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import AES_ECB_Cipher;
+
+
+def code = prev.getResponseCode();
+if(&quot;200&quot; == code){
+	//请求成功
+	//app解密
+	String key = &quot;bbyy-2021-No-Bug&quot;;
+	//H5解密
+	//String key = &quot;jYSjYyxKF9ns6k9C58IcJYa4AFr1HSTn&quot;;
+	
+	//String result = &quot;${responseBody}&quot;;
+	String result = prev.getResponseDataAsString().replace(&quot;\&quot;&quot;,&quot;&quot;);
+	
+	try{
+		result = AES_ECB_Cipher.setDecrypt(key, result);
+	}
+	catch(Exception ex){
+	    
+	}
+	finally{
+	    //一定会被执行
+	    prev.setResponseData(result);
+	}
+}else{
+	//请求失败
+}
+
+
+</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="断言: code应等于0" enabled="true">
+            <stringProp name="JSON_PATH">$.code</stringProp>
+            <stringProp name="EXPECTED_VALUE">0</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">true</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="07注册5%" enabled="true">
+        <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="TargetLevel">${__tstFeedback(ThroughputShapingTimer2,17,51,17)}</stringProp>
+        <stringProp name="RampUp">0</stringProp>
+        <stringProp name="Steps">0</stringProp>
+        <stringProp name="Hold">590</stringProp>
+        <stringProp name="LogFilename"></stringProp>
+        <stringProp name="Iterations"></stringProp>
+        <stringProp name="Unit">S</stringProp>
+      </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
+      <hashTree>
+        <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="ThroughputShapingTimer2" enabled="true">
+          <collectionProp name="load_profile">
+            <collectionProp name="1901182432">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="1513134">16.7</stringProp>
+              <stringProp name="1567">10</stringProp>
+            </collectionProp>
+            <collectionProp name="458018798">
+              <stringProp name="1513134">16.7</stringProp>
+              <stringProp name="1538120">21.7</stringProp>
+              <stringProp name="52748">590</stringProp>
+            </collectionProp>
+          </collectionProp>
+        </kg.apc.jmeter.timers.VariableThroughputTimer>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="07注册5%" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${registerRequestBody}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/customer-api/front/user/register</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="TestPlan.comments">每次运行脚本注册不同账号，automatedTesting开头的账号</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en</stringProp>
+              </elementProp>
+              <elementProp name="channel" elementType="Header">
+                <stringProp name="Header.name">channel</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="Access-token" elementType="Header">
+                <stringProp name="Header.name">Access-token</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="device-id" elementType="Header">
+                <stringProp name="Header.name">device-id</stringProp>
+                <stringProp name="Header.value">${device-id}</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="app-version" elementType="Header">
+                <stringProp name="Header.name">app-version</stringProp>
+                <stringProp name="Header.value">2</stringProp>
+              </elementProp>
+              <elementProp name="environment" elementType="Header">
+                <stringProp name="Header.name">environment</stringProp>
+                <stringProp name="Header.value">4G</stringProp>
+              </elementProp>
+              <elementProp name="driver" elementType="Header">
+                <stringProp name="Header.name">driver</stringProp>
+                <stringProp name="Header.value">android</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json; charset=utf-8</stringProp>
+              </elementProp>
+              <elementProp name="model" elementType="Header">
+                <stringProp name="Header.name">model</stringProp>
+                <stringProp name="Header.value">SM-A7050</stringProp>
+              </elementProp>
+              <elementProp name="osVersion" elementType="Header">
+                <stringProp name="Header.name">osVersion</stringProp>
+                <stringProp name="Header.value">11</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">okhttp/5.0.0-alpha.3</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">x-forwarded-for</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 预处理程序" enabled="true">
+            <stringProp name="cacheKey">false</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import AES_ECB_Cipher;
+
+
+//app注册参数
+def requestBody=&quot;&quot;&quot;{
+    &quot;deviceInfo&quot;:
+    {
+        &quot;brand&quot;: &quot;samsung&quot;,
+        &quot;browser&quot;: &quot;app&quot;,
+        &quot;environment&quot;: &quot;4G&quot;,
+        &quot;imei&quot;: &quot;7165554BDB6D656F&quot;,
+        &quot;inviteType&quot;: &quot;android&quot;,
+        &quot;lat&quot;: 0,
+        &quot;lng&quot;: 0,
+        &quot;model&quot;: &quot;SM-A7050&quot;,
+        &quot;version&quot;: &quot;11&quot;
+    },
+    &quot;password&quot;: &quot;a111111&quot;,
+    &quot;platformId&quot;: &quot;&quot;,
+    &quot;source&quot;: &quot;&quot;,
+    &quot;username&quot;: &quot;${__RandomString(8,abcdefghijklmnopqrstuvwxyz123456789,)}&quot;,
+    &quot;usernameOrEmail&quot;: &quot;&quot;,
+    &quot;verifyCode&quot;: &quot;&quot;
+}&quot;&quot;&quot;
+
+
+
+// 2.加密参数
+String key = &quot;bbyy-2021-No-Bug&quot;;
+//String key = &quot;jYSjYyxKF9ns6k9C58IcJYa4AFr1HSTn&quot;;
+String result = AES_ECB_Cipher.setEncrypt(key, requestBody);
+//log.info(result);
+vars.put(&quot;registerRequestBody&quot;,result);
+
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="解密新版v1" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import AES_ECB_Cipher;
+
+
+def code = prev.getResponseCode();
+if(&quot;200&quot; == code){
+	//请求成功
+	//app解密
+	String key = &quot;bbyy-2021-No-Bug&quot;;
+	//H5解密
+	//String key = &quot;jYSjYyxKF9ns6k9C58IcJYa4AFr1HSTn&quot;;
+	
+	//String result = &quot;${responseBody}&quot;;
+	String result = prev.getResponseDataAsString().replace(&quot;\&quot;&quot;,&quot;&quot;);
+	
+	try{
+		result = AES_ECB_Cipher.setDecrypt(key, result);
+	}
+	catch(Exception ex){
+	    
+	}
+	finally{
+	    //一定会被执行
+	    prev.setResponseData(result);
+	}
+}else{
+	//请求失败
+}
+
+
+</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="断言: code应等于0" enabled="true">
+            <stringProp name="JSON_PATH">$.code</stringProp>
+            <stringProp name="EXPECTED_VALUE">0</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">true</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="08特别关注页5%" enabled="true">
+        <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="TargetLevel">${__tstFeedback(ThroughputShapingTimer8,17,51,17)}</stringProp>
+        <stringProp name="RampUp">0</stringProp>
+        <stringProp name="Steps">0</stringProp>
+        <stringProp name="Hold">590</stringProp>
+        <stringProp name="LogFilename"></stringProp>
+        <stringProp name="Iterations"></stringProp>
+        <stringProp name="Unit">S</stringProp>
+      </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
+      <hashTree>
+        <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="ThroughputShapingTimer8" enabled="true">
+          <collectionProp name="load_profile">
+            <collectionProp name="1901182432">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="1513134">16.7</stringProp>
+              <stringProp name="1567">10</stringProp>
+            </collectionProp>
+            <collectionProp name="458018798">
+              <stringProp name="1513134">16.7</stringProp>
+              <stringProp name="1538120">21.7</stringProp>
+              <stringProp name="52748">590</stringProp>
+            </collectionProp>
+          </collectionProp>
+        </kg.apc.jmeter.timers.VariableThroughputTimer>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="读取userToken.csv文件" enabled="true">
+          <stringProp name="filename">userToken.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames">userToken</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.group</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="08特别关注页5%" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="count" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">count</stringProp>
+                <stringProp name="Argument.value">10</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="timeline" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">timeline</stringProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/flower-api/post/attention</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en</stringProp>
+              </elementProp>
+              <elementProp name="channel" elementType="Header">
+                <stringProp name="Header.name">channel</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="Access-token" elementType="Header">
+                <stringProp name="Header.name">Access-token</stringProp>
+                <stringProp name="Header.value">${userToken}</stringProp>
+              </elementProp>
+              <elementProp name="device-id" elementType="Header">
+                <stringProp name="Header.name">device-id</stringProp>
+                <stringProp name="Header.value">${device-id}</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="app-version" elementType="Header">
+                <stringProp name="Header.name">app-version</stringProp>
+                <stringProp name="Header.value">1.0.0</stringProp>
+              </elementProp>
+              <elementProp name="environment" elementType="Header">
+                <stringProp name="Header.name">environment</stringProp>
+                <stringProp name="Header.value">wifi</stringProp>
+              </elementProp>
+              <elementProp name="driver" elementType="Header">
+                <stringProp name="Header.name">driver</stringProp>
+                <stringProp name="Header.value">android</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json; charset=utf-8</stringProp>
+              </elementProp>
+              <elementProp name="model" elementType="Header">
+                <stringProp name="Header.name">model</stringProp>
+                <stringProp name="Header.value">SM-A7050</stringProp>
+              </elementProp>
+              <elementProp name="osVersion" elementType="Header">
+                <stringProp name="Header.name">osVersion</stringProp>
+                <stringProp name="Header.value">11</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">okhttp/5.0.0-alpha.3</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="解密新版v1" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import AES_ECB_Cipher;
+
+
+def code = prev.getResponseCode();
+if(&quot;200&quot; == code){
+	//请求成功
+	//app解密
+	String key = &quot;bbyy-2021-No-Bug&quot;;
+	//H5解密
+	//String key = &quot;jYSjYyxKF9ns6k9C58IcJYa4AFr1HSTn&quot;;
+	
+	//String result = &quot;${responseBody}&quot;;
+	String result = prev.getResponseDataAsString().replace(&quot;\&quot;&quot;,&quot;&quot;);
+	
+	try{
+		result = AES_ECB_Cipher.setDecrypt(key, result);
+	}
+	catch(Exception ex){
+	    
+	}
+	finally{
+	    //一定会被执行
+	    prev.setResponseData(result);
+	}
+}else{
+	//请求失败
+}
+
+
+</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="断言: code应等于0" enabled="true">
+            <stringProp name="JSON_PATH">$.code</stringProp>
+            <stringProp name="EXPECTED_VALUE">0</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">true</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="09会话列表5%" enabled="true">
+        <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="TargetLevel">${__tstFeedback(ThroughputShapingTimer9,17,51,17)}</stringProp>
+        <stringProp name="RampUp">0</stringProp>
+        <stringProp name="Steps">0</stringProp>
+        <stringProp name="Hold">590</stringProp>
+        <stringProp name="LogFilename"></stringProp>
+        <stringProp name="Iterations"></stringProp>
+        <stringProp name="Unit">S</stringProp>
+      </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
+      <hashTree>
+        <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="ThroughputShapingTimer9" enabled="true">
+          <collectionProp name="load_profile">
+            <collectionProp name="1901182432">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="1513134">16.7</stringProp>
+              <stringProp name="1567">10</stringProp>
+            </collectionProp>
+            <collectionProp name="458018798">
+              <stringProp name="1513134">16.7</stringProp>
+              <stringProp name="1538120">21.7</stringProp>
+              <stringProp name="52748">590</stringProp>
+            </collectionProp>
+          </collectionProp>
+          <stringProp name="TestPlan.comments">10</stringProp>
+        </kg.apc.jmeter.timers.VariableThroughputTimer>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="读取userToken.csv文件" enabled="true">
+          <stringProp name="filename">userToken.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames">userToken</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.group</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="09会话列表5%" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="count" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">count</stringProp>
+                <stringProp name="Argument.value">300</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="timeline" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">timeline</stringProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">messages-api/char/session/listCharSession</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en</stringProp>
+              </elementProp>
+              <elementProp name="channel" elementType="Header">
+                <stringProp name="Header.name">channel</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="Access-token" elementType="Header">
+                <stringProp name="Header.name">Access-token</stringProp>
+                <stringProp name="Header.value">${userToken}</stringProp>
+              </elementProp>
+              <elementProp name="device-id" elementType="Header">
+                <stringProp name="Header.name">device-id</stringProp>
+                <stringProp name="Header.value">${device-id}</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="app-version" elementType="Header">
+                <stringProp name="Header.name">app-version</stringProp>
+                <stringProp name="Header.value">7</stringProp>
+              </elementProp>
+              <elementProp name="environment" elementType="Header">
+                <stringProp name="Header.name">environment</stringProp>
+                <stringProp name="Header.value">wifi</stringProp>
+              </elementProp>
+              <elementProp name="driver" elementType="Header">
+                <stringProp name="Header.name">driver</stringProp>
+                <stringProp name="Header.value">android</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json; charset=utf-8</stringProp>
+              </elementProp>
+              <elementProp name="model" elementType="Header">
+                <stringProp name="Header.name">model</stringProp>
+                <stringProp name="Header.value">SM-A7050</stringProp>
+              </elementProp>
+              <elementProp name="osVersion" elementType="Header">
+                <stringProp name="Header.name">osVersion</stringProp>
+                <stringProp name="Header.value">11</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">okhttp/5.0.0-alpha.3</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="解密新版v1" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import AES_ECB_Cipher;
+
+
+def code = prev.getResponseCode();
+if(&quot;200&quot; == code){
+	//请求成功
+	//app解密
+	String key = &quot;bbyy-2021-No-Bug&quot;;
+	//H5解密
+	//String key = &quot;jYSjYyxKF9ns6k9C58IcJYa4AFr1HSTn&quot;;
+	
+	//String result = &quot;${responseBody}&quot;;
+	String result = prev.getResponseDataAsString().replace(&quot;\&quot;&quot;,&quot;&quot;);
+	
+	try{
+		result = AES_ECB_Cipher.setDecrypt(key, result);
+	}
+	catch(Exception ex){
+	    
+	}
+	finally{
+	    //一定会被执行
+	    prev.setResponseData(result);
+	}
+}else{
+	//请求失败
+}
+
+
+</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="断言: code应等于0" enabled="true">
+            <stringProp name="JSON_PATH">$.code</stringProp>
+            <stringProp name="EXPECTED_VALUE">0</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">true</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="10我的订阅页5%" enabled="true">
+        <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="TargetLevel">${__tstFeedback(ThroughputShapingTimer10,17,51,17)}</stringProp>
+        <stringProp name="RampUp">0</stringProp>
+        <stringProp name="Steps">0</stringProp>
+        <stringProp name="Hold">590</stringProp>
+        <stringProp name="LogFilename"></stringProp>
+        <stringProp name="Iterations"></stringProp>
+        <stringProp name="Unit">S</stringProp>
+      </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
+      <hashTree>
+        <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="ThroughputShapingTimer10" enabled="true">
+          <collectionProp name="load_profile">
+            <collectionProp name="1901182432">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="1513134">16.7</stringProp>
+              <stringProp name="1567">10</stringProp>
+            </collectionProp>
+            <collectionProp name="458018798">
+              <stringProp name="1513134">16.7</stringProp>
+              <stringProp name="1538120">21.7</stringProp>
+              <stringProp name="52748">590</stringProp>
+            </collectionProp>
+          </collectionProp>
+        </kg.apc.jmeter.timers.VariableThroughputTimer>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="读取userToken.csv文件" enabled="true">
+          <stringProp name="filename">userToken.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames">userToken</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.group</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="10我的订阅页5%" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">1XcB6jPPR9HaWD9Nkz1VoBCYkRKv/01FkqbgDD97C7BdIFepFXirQWoVDJjbnKvq</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/customer-api/front/user/subscription/mySubscription</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en</stringProp>
+              </elementProp>
+              <elementProp name="channel" elementType="Header">
+                <stringProp name="Header.name">channel</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="Access-token" elementType="Header">
+                <stringProp name="Header.name">Access-token</stringProp>
+                <stringProp name="Header.value">${userToken}</stringProp>
+              </elementProp>
+              <elementProp name="device-id" elementType="Header">
+                <stringProp name="Header.name">device-id</stringProp>
+                <stringProp name="Header.value">${device-id}</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="app-version" elementType="Header">
+                <stringProp name="Header.name">app-version</stringProp>
+                <stringProp name="Header.value">1.0.0</stringProp>
+              </elementProp>
+              <elementProp name="environment" elementType="Header">
+                <stringProp name="Header.name">environment</stringProp>
+                <stringProp name="Header.value">wifi</stringProp>
+              </elementProp>
+              <elementProp name="driver" elementType="Header">
+                <stringProp name="Header.name">driver</stringProp>
+                <stringProp name="Header.value">android</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json; charset=utf-8</stringProp>
+              </elementProp>
+              <elementProp name="model" elementType="Header">
+                <stringProp name="Header.name">model</stringProp>
+                <stringProp name="Header.value">SM-A7050</stringProp>
+              </elementProp>
+              <elementProp name="osVersion" elementType="Header">
+                <stringProp name="Header.name">osVersion</stringProp>
+                <stringProp name="Header.value">11</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">okhttp/5.0.0-alpha.3</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name"></stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="解密新版v1" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import AES_ECB_Cipher;
+
+
+def code = prev.getResponseCode();
+if(&quot;200&quot; == code){
+	//请求成功
+	//app解密
+	String key = &quot;bbyy-2021-No-Bug&quot;;
+	//H5解密
+	//String key = &quot;jYSjYyxKF9ns6k9C58IcJYa4AFr1HSTn&quot;;
+	
+	//String result = &quot;${responseBody}&quot;;
+	String result = prev.getResponseDataAsString().replace(&quot;\&quot;&quot;,&quot;&quot;);
+	
+	try{
+		result = AES_ECB_Cipher.setDecrypt(key, result);
+	}
+	catch(Exception ex){
+	    
+	}
+	finally{
+	    //一定会被执行
+	    prev.setResponseData(result);
+	}
+}else{
+	//请求失败
+}
+
+
+</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="断言: code应等于0" enabled="true">
+            <stringProp name="JSON_PATH">$.code</stringProp>
+            <stringProp name="EXPECTED_VALUE">0</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">true</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="11我的收藏页5%" enabled="true">
+        <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="TargetLevel">${__tstFeedback(ThroughputShapingTimer11,17,51,17)}</stringProp>
+        <stringProp name="RampUp">0</stringProp>
+        <stringProp name="Steps">0</stringProp>
+        <stringProp name="Hold">590</stringProp>
+        <stringProp name="LogFilename"></stringProp>
+        <stringProp name="Iterations"></stringProp>
+        <stringProp name="Unit">S</stringProp>
+      </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
+      <hashTree>
+        <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="ThroughputShapingTimer11" enabled="true">
+          <collectionProp name="load_profile">
+            <collectionProp name="1901182432">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="1513134">16.7</stringProp>
+              <stringProp name="1567">10</stringProp>
+            </collectionProp>
+            <collectionProp name="458018798">
+              <stringProp name="1513134">16.7</stringProp>
+              <stringProp name="1538120">21.7</stringProp>
+              <stringProp name="52748">590</stringProp>
+            </collectionProp>
+          </collectionProp>
+        </kg.apc.jmeter.timers.VariableThroughputTimer>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="读取userToken.csv文件" enabled="true">
+          <stringProp name="filename">userToken.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames">userToken</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.group</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="11我的收藏页5%" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="count" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">10</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">count</stringProp>
+              </elementProp>
+              <elementProp name="timeline" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">timeline</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/flower-api/post/Keep</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en</stringProp>
+              </elementProp>
+              <elementProp name="channel" elementType="Header">
+                <stringProp name="Header.name">channel</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="Access-token" elementType="Header">
+                <stringProp name="Header.name">Access-token</stringProp>
+                <stringProp name="Header.value">${userToken}</stringProp>
+              </elementProp>
+              <elementProp name="device-id" elementType="Header">
+                <stringProp name="Header.name">device-id</stringProp>
+                <stringProp name="Header.value">${device-id}</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="app-version" elementType="Header">
+                <stringProp name="Header.name">app-version</stringProp>
+                <stringProp name="Header.value">7</stringProp>
+              </elementProp>
+              <elementProp name="environment" elementType="Header">
+                <stringProp name="Header.name">environment</stringProp>
+                <stringProp name="Header.value">wifi</stringProp>
+              </elementProp>
+              <elementProp name="driver" elementType="Header">
+                <stringProp name="Header.name">driver</stringProp>
+                <stringProp name="Header.value">android</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json; charset=utf-8</stringProp>
+              </elementProp>
+              <elementProp name="model" elementType="Header">
+                <stringProp name="Header.name">model</stringProp>
+                <stringProp name="Header.value">SM-A7050</stringProp>
+              </elementProp>
+              <elementProp name="osVersion" elementType="Header">
+                <stringProp name="Header.name">osVersion</stringProp>
+                <stringProp name="Header.value">11</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">okhttp/5.0.0-alpha.3</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="解密新版v1" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import AES_ECB_Cipher;
+
+
+def code = prev.getResponseCode();
+if(&quot;200&quot; == code){
+	//请求成功
+	//app解密
+	String key = &quot;bbyy-2021-No-Bug&quot;;
+	//H5解密
+	//String key = &quot;jYSjYyxKF9ns6k9C58IcJYa4AFr1HSTn&quot;;
+	
+	//String result = &quot;${responseBody}&quot;;
+	String result = prev.getResponseDataAsString().replace(&quot;\&quot;&quot;,&quot;&quot;);
+	
+	try{
+		result = AES_ECB_Cipher.setDecrypt(key, result);
+	}
+	catch(Exception ex){
+	    
+	}
+	finally{
+	    //一定会被执行
+	    prev.setResponseData(result);
+	}
+}else{
+	//请求失败
+}
+
+
+</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="断言: code应等于0" enabled="true">
+            <stringProp name="JSON_PATH">$.code</stringProp>
+            <stringProp name="EXPECTED_VALUE">0</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">true</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="12版本信息5%" enabled="true">
+        <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="TargetLevel">${__tstFeedback(ThroughputShapingTimer12,17,51,17)}</stringProp>
+        <stringProp name="RampUp">0</stringProp>
+        <stringProp name="Steps">0</stringProp>
+        <stringProp name="Hold">590</stringProp>
+        <stringProp name="LogFilename"></stringProp>
+        <stringProp name="Iterations"></stringProp>
+        <stringProp name="Unit">S</stringProp>
+      </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
+      <hashTree>
+        <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="ThroughputShapingTimer12" enabled="true">
+          <collectionProp name="load_profile">
+            <collectionProp name="1901182432">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="1513134">16.7</stringProp>
+              <stringProp name="1567">10</stringProp>
+            </collectionProp>
+            <collectionProp name="458018798">
+              <stringProp name="1513134">16.7</stringProp>
+              <stringProp name="1538120">21.7</stringProp>
+              <stringProp name="52748">590</stringProp>
+            </collectionProp>
+          </collectionProp>
+        </kg.apc.jmeter.timers.VariableThroughputTimer>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="读取userToken.csv文件" enabled="true">
+          <stringProp name="filename">userToken.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames">userToken</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.group</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="12版本信息5%" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="platformType" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">platformType</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/customer-api/version/v1/version</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en</stringProp>
+              </elementProp>
+              <elementProp name="channel" elementType="Header">
+                <stringProp name="Header.name">channel</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="Access-token" elementType="Header">
+                <stringProp name="Header.name">Access-token</stringProp>
+                <stringProp name="Header.value">${userToken}</stringProp>
+              </elementProp>
+              <elementProp name="device-id" elementType="Header">
+                <stringProp name="Header.name">device-id</stringProp>
+                <stringProp name="Header.value">${device-id}</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="app-version" elementType="Header">
+                <stringProp name="Header.name">app-version</stringProp>
+                <stringProp name="Header.value">1.0.0</stringProp>
+              </elementProp>
+              <elementProp name="environment" elementType="Header">
+                <stringProp name="Header.name">environment</stringProp>
+                <stringProp name="Header.value">wifi</stringProp>
+              </elementProp>
+              <elementProp name="driver" elementType="Header">
+                <stringProp name="Header.name">driver</stringProp>
+                <stringProp name="Header.value">android</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json; charset=utf-8</stringProp>
+              </elementProp>
+              <elementProp name="model" elementType="Header">
+                <stringProp name="Header.name">model</stringProp>
+                <stringProp name="Header.value">SM-A7050</stringProp>
+              </elementProp>
+              <elementProp name="osVersion" elementType="Header">
+                <stringProp name="Header.name">osVersion</stringProp>
+                <stringProp name="Header.value">11</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">okhttp/5.0.0-alpha.3</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="解密新版v1" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import AES_ECB_Cipher;
+
+
+def code = prev.getResponseCode();
+if(&quot;200&quot; == code){
+	//请求成功
+	//app解密
+	String key = &quot;bbyy-2021-No-Bug&quot;;
+	//H5解密
+	//String key = &quot;jYSjYyxKF9ns6k9C58IcJYa4AFr1HSTn&quot;;
+	
+	//String result = &quot;${responseBody}&quot;;
+	String result = prev.getResponseDataAsString().replace(&quot;\&quot;&quot;,&quot;&quot;);
+	
+	try{
+		result = AES_ECB_Cipher.setDecrypt(key, result);
+	}
+	catch(Exception ex){
+	    
+	}
+	finally{
+	    //一定会被执行
+	    prev.setResponseData(result);
+	}
+}else{
+	//请求失败
+}
+
+
+</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="断言: code应等于0" enabled="true">
+            <stringProp name="JSON_PATH">$.code</stringProp>
+            <stringProp name="EXPECTED_VALUE">0</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">true</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="13首页搜索5%" enabled="true">
+        <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="TargetLevel">${__tstFeedback(ThroughputShapingTimer13,17,51,17)}</stringProp>
+        <stringProp name="RampUp">0</stringProp>
+        <stringProp name="Steps">0</stringProp>
+        <stringProp name="Hold">590</stringProp>
+        <stringProp name="LogFilename"></stringProp>
+        <stringProp name="Iterations"></stringProp>
+        <stringProp name="Unit">S</stringProp>
+      </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
+      <hashTree>
+        <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="ThroughputShapingTimer13" enabled="true">
+          <collectionProp name="load_profile">
+            <collectionProp name="1901182432">
+              <stringProp name="49">1</stringProp>
+              <stringProp name="1513134">16.7</stringProp>
+              <stringProp name="1567">10</stringProp>
+            </collectionProp>
+            <collectionProp name="458018798">
+              <stringProp name="1513134">16.7</stringProp>
+              <stringProp name="1538120">21.7</stringProp>
+              <stringProp name="52748">590</stringProp>
+            </collectionProp>
+          </collectionProp>
+        </kg.apc.jmeter.timers.VariableThroughputTimer>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="读取userToken.csv文件" enabled="true">
+          <stringProp name="filename">userToken.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames">userToken</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.group</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="13首页搜索5%" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">zsa2CEh46UeOBpxiRoQkBoCtFPRHQsquVSeJF3JnFaXVhHzvHYiZf/snmGh7a6ra</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/flower-api/search/v1/homeSearch</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="TestPlan.comments">关键字：u</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en</stringProp>
+              </elementProp>
+              <elementProp name="channel" elementType="Header">
+                <stringProp name="Header.name">channel</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="Access-token" elementType="Header">
+                <stringProp name="Header.name">Access-token</stringProp>
+                <stringProp name="Header.value">${userToken}</stringProp>
+              </elementProp>
+              <elementProp name="device-id" elementType="Header">
+                <stringProp name="Header.name">device-id</stringProp>
+                <stringProp name="Header.value">${device-id}</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="app-version" elementType="Header">
+                <stringProp name="Header.name">app-version</stringProp>
+                <stringProp name="Header.value">1.0.0</stringProp>
+              </elementProp>
+              <elementProp name="environment" elementType="Header">
+                <stringProp name="Header.name">environment</stringProp>
+                <stringProp name="Header.value">wifi</stringProp>
+              </elementProp>
+              <elementProp name="driver" elementType="Header">
+                <stringProp name="Header.name">driver</stringProp>
+                <stringProp name="Header.value">android</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json; charset=utf-8</stringProp>
+              </elementProp>
+              <elementProp name="model" elementType="Header">
+                <stringProp name="Header.name">model</stringProp>
+                <stringProp name="Header.value">SM-A7050</stringProp>
+              </elementProp>
+              <elementProp name="osVersion" elementType="Header">
+                <stringProp name="Header.name">osVersion</stringProp>
+                <stringProp name="Header.value">11</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">okhttp/5.0.0-alpha.3</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="解密新版v1" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import AES_ECB_Cipher;
+
+
+def code = prev.getResponseCode();
+if(&quot;200&quot; == code){
+	//请求成功
+	//app解密
+	String key = &quot;bbyy-2021-No-Bug&quot;;
+	//H5解密
+	//String key = &quot;jYSjYyxKF9ns6k9C58IcJYa4AFr1HSTn&quot;;
+	
+	//String result = &quot;${responseBody}&quot;;
+	String result = prev.getResponseDataAsString().replace(&quot;\&quot;&quot;,&quot;&quot;);
+	
+	try{
+		result = AES_ECB_Cipher.setDecrypt(key, result);
+	}
+	catch(Exception ex){
+	    
+	}
+	finally{
+	    //一定会被执行
+	    prev.setResponseData(result);
+	}
+}else{
+	//请求失败
+}
+
+
+</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="断言: code应等于0" enabled="true">
+            <stringProp name="JSON_PATH">$.code</stringProp>
+            <stringProp name="EXPECTED_VALUE">0</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">true</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
